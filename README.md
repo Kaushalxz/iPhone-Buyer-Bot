@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 # iPhone-Checkout-Bot
-=======
+==============================================================================================================
 # Puppeteer Script for Automating iPhone 15 Pro Purchase on Apple Website
 
 This script uses Puppeteer along with the Stealth Plugin to automate the process of selecting and adding an iPhone 15 Pro to the cart on the Apple website. The script runs in non-headless mode and performs a series of actions such as selecting the model, color, storage capacity, and additional options before proceeding to the checkout page.

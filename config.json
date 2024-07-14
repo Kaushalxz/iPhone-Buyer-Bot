@@ -1,0 +1,19 @@
+{
+    "url": "https://www.apple.com/ie/iphone-15-pro/",
+    "selectors": {
+        "buyButton": "a[data-analytics-title='buy | iphone 15 pro']",
+        "iPhoneOption": "label[id=':r8:_label']",
+        "colorOption": "img[src*='iphone-pro-finish-naturaltitanium-202309']",
+        "storageOption": ".form-selector-title",
+        "noTradeIn": "label[for='noTradeIn']",
+        "noAppleCare": "label[for='applecareplus_59_noapplecare']",
+        "addToCart": "button[data-analytics-title='Add to Bag']",
+        "reviewBag": "button[data-autom='proceed']",
+        "checkOut": "button[data-autom='checkout']",
+        "guestCheckout": "button[data-autom='guest-checkout-btn']",
+        "editPostcode": "button[data-autom='checkout-zipcode-edit']",
+        "cityInput": "input[id='checkout.fulfillment.deliveryTab.delivery.deliveryLocation.address.city']",
+        "applyButton": "#checkout\\.fulfillment\\.deliveryTab\\.delivery\\.deliveryLocation\\.Apply",
+        "continueToShipping": "button[data-autom='fulfillment-continue-button']"
+    }
+}

@@ -76,5 +76,44 @@ async function run() {
         console.log("Successfully clicked the 'Check Out' button."); // Success message
     } catch (error) {
         console.error("Error clicking the 'Check Out' button:", error); // Error message
-}
+    }
+
+    try {
+        const guestCheckoutButtonSelector = "button[data-autom='guest-checkout-btn']"; // Selector based on the data-autom attribute
+        await page.waitForSelector(guestCheckoutButtonSelector, { timeout: 5000 }); // Wait for the selector to appear
+        await page.click(guestCheckoutButtonSelector); // Click the button
+        console.log("Successfully clicked the 'Continue as Guest' button."); // Success message
+    } catch (error) {
+        console.error("Error clicking the 'Continue as Guest' button:", error); // Error message
+    }
+    try {
+        const editPostcodeButtonSelector = "button[data-autom='checkout-zipcode-edit']"; // Selector based on the data-autom attribute
+        await page.waitForSelector(editPostcodeButtonSelector, { timeout: 100000 }); // Wait for the selector to appear
+        await page.click(editPostcodeButtonSelector); // Click the button
+        console.log("Successfully clicked the 'Edit postcode: City/Town' button."); // Success message
+    } catch (error) {
+        console.error("Error clicking the 'Edit postcode: City/Town' button:", error); // Error message
+    }
+
+    let citySelector = "input[id='checkout.fulfillment.deliveryTab.delivery.deliveryLocation.address.city']";
+    await page.waitForSelector(citySelector);
+    await page.type(citySelector, "Dublin");
+
+    try {
+        const applyButtonSelector = "#checkout\\.fulfillment\\.deliveryTab\\.delivery\\.deliveryLocation\\.Apply"; // Selector for the 'Apply' button
+        await page.waitForSelector(applyButtonSelector, { timeout: 5000 }); // Wait for the selector to appear
+        await page.click(applyButtonSelector); // Click the button
+        console.log("Successfully clicked the 'Apply' button."); // Success message
+    } catch (error) {
+        console.error("Error clicking the 'Apply' button:", error); // Error message
+    }
+
+    try {
+        const continueToShippingButtonSelector = "button[data-autom='fulfillment-continue-button']"; // Selector for the 'Continue to Shipping Address' button
+        await page.waitForSelector(continueToShippingButtonSelector, { timeout: 100000 }); // Wait for the selector to appear
+        await page.click(continueToShippingButtonSelector); // Click the button
+        console.log("Successfully clicked the 'Continue to Shipping Address' button."); // Success message
+    } catch (error) {
+        console.error("Error clicking the 'Continue to Shipping Address' button:", error); // Error message
+    }
 }run();
